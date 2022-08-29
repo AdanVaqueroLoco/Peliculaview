@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,63 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="gato" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Back_to_the_future" translatesAutoresizingMaskIntoConstraints="NO" id="A0x-Sw-4uF" userLabel="poster">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="3150"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="qk0-fX-Edh">
+                                <rect key="frame" x="20" y="551" width="335" height="81.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Zm-K5-Duq" userLabel="texto">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="81.5"/>
+                                        <string key="text">texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="5Zm-K5-Duq" secondAttribute="trailing" constant="20" id="nFa-mU-ezF"/>
+                                    <constraint firstItem="5Zm-K5-Duq" firstAttribute="leading" secondItem="qk0-fX-Edh" secondAttribute="leading" constant="20" id="p4C-Ey-rzn"/>
+                                </constraints>
+                            </stackView>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5VB-wW-0lg">
+                                <rect key="frame" x="20" y="422" width="215" height="41"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3AH-lf-g4d" userLabel="play">
+                                <rect key="frame" x="20" y="350" width="335" height="56"/>
+                                <color key="backgroundColor" red="0.27084653614765258" green="0.22680231764628159" blue="0.84279873704663211" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.013086959462408862" green="0.0088419217853426199" blue="0.22727088730569944" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="A0x-Sw-4uF" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="1Ou-3g-Rnq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5VB-wW-0lg" secondAttribute="trailing" constant="20" id="2PX-8d-t8A"/>
+                            <constraint firstItem="3AH-lf-g4d" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="330" id="NTr-Ey-suA"/>
+                            <constraint firstItem="qk0-fX-Edh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="RPE-Qw-kdz"/>
+                            <constraint firstItem="5Zm-K5-Duq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="531" id="Ull-Py-vhd"/>
+                            <constraint firstItem="A0x-Sw-4uF" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ZIZ-7w-jac"/>
+                            <constraint firstItem="A0x-Sw-4uF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cDt-Ue-Y6M"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5VB-wW-0lg" secondAttribute="trailing" constant="140" id="nJf-Zu-Z9I"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qk0-fX-Edh" secondAttribute="trailing" constant="20" id="qM3-bM-GdH"/>
+                            <constraint firstItem="5VB-wW-0lg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="uea-rE-Obe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3AH-lf-g4d" secondAttribute="trailing" constant="20" id="va8-YE-la3"/>
+                            <constraint firstItem="3AH-lf-g4d" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="zov-9k-qRi"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="24.800000000000001" y="31.934032983508249"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Back_to_the_future" width="2013" height="3150"/>
+    </resources>
 </document>
